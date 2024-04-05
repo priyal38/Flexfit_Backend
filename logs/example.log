@@ -1,0 +1,54 @@
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:15:05'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:16:19'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:19:00'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:20:15'
+}
+{
+  message: '\x1B[32mConnected to MongoDB\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:22:23'
+}
+undefined
+undefined
+undefined
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:26:35'
+}
+{
+  message: 'Connected to MongoDB',
+  level: 'info',
+  label: 'custom format',
+  timestamp: 'Apr-03-2024 08:28:03'
+}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Connected to MongoDB"}
+{"level":"info","message":"Connected to MongoDB"}
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
+[32m{"level":"info","message":"Connected to MongoDB"}[39m
