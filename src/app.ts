@@ -23,7 +23,7 @@ app.use(cookieparser());
 app.use('/uploads' , express.static('./uploads'))
 
 
-app.use('/api', indexroute)
+app.use('/', indexroute)
 const PORT = 5000;
 
  

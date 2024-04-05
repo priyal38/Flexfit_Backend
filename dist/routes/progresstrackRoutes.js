@@ -1,0 +1,23 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const getTableDataByDate_1 = __importDefault(require("../controllers/ProgressTrack/getTableDataByDate"));
+const updateCompletionStatus_1 = __importDefault(require("../controllers/ProgressTrack/updateCompletionStatus"));
+const tokenValidation_1 = __importDefault(require("../middleware/tokenValidation"));
+const addUserWorkoutController_1 = __importDefault(require("../controllers/ProgressTrack/addUserWorkoutController"));
+const getChartDataController_1 = __importDefault(require("../controllers/ProgressTrack/getChartDataController"));
+const updateTableDataController_1 = __importDefault(require("../controllers/ProgressTrack/updateTableDataController"));
+const deleteWorkoutController_1 = __importDefault(require("../controllers/ProgressTrack/deleteWorkoutController"));
+const getAllDataByuserIdController_1 = __importDefault(require("../controllers/ProgressTrack/getAllDataByuserIdController"));
+const progress = express_1.default.Router();
+progress.get("/gettabledata", tokenValidation_1.default, getTableDataByDate_1.default);
+progress.get("/getchartdata", tokenValidation_1.default, getChartDataController_1.default);
+progress.get("/getcarddata", tokenValidation_1.default, getAllDataByuserIdController_1.default);
+progress.post("/adduserworkout", tokenValidation_1.default, addUserWorkoutController_1.default);
+progress.put("/updateCompletionStatus", tokenValidation_1.default, updateCompletionStatus_1.default);
+progress.put("/updatetabledata/:id", tokenValidation_1.default, updateTableDataController_1.default);
+progress.delete("/deletetabledata/:id", tokenValidation_1.default, deleteWorkoutController_1.default);
+exports.default = progress;
