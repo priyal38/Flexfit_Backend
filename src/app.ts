@@ -15,7 +15,7 @@ const app = express();
 app.use(json());
 app.use(cors(
     {
-        origin:[   "https://flexfit-fitness.vercel.app"],
+        origin:["https://flexfit-fitness.vercel.app" , "http://localhost:3000"],
         credentials:true
     }
 )); 
