@@ -3,12 +3,13 @@ import * as apiResponse from "../../helper/apiResponse";
 import BlogModel from "../../models/blogModel";
 import { upload } from "../../helper/multerConfig";
 import schemaValidator from "../../middleware/schemaValidator";
+const DEFAULT_IMAGE_PATH = "uploads/1711796853387.jpg"; // change to your default image path
 
 
 
 const addBlog = [
   upload.single('coverImg'),
-  schemaValidator('/addblog') ,
+  // schemaValidator('/addblog') ,
   
 async (req: Request, res: Response) => {
 
@@ -26,7 +27,7 @@ async (req: Request, res: Response) => {
         content:JSON.parse(content),
         author,
         category,
-        coverImg: req.file?.path,
+        coverImg: req.file?.path || DEFAULT_IMAGE_PATH,
         readtime,
         subtitle
       });
