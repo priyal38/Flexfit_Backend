@@ -4,10 +4,11 @@ import * as apiResponse from "../../helper/apiResponse";
 import WorkoutModel from "../../models/workoutModel";
 import { upload } from "../../helper/multerConfig";
 import schemaValidator from "../../middleware/schemaValidator";
+const DEFAULT_IMAGE_PATH = "uploads/1709615449672.jpg";
 
 const addWorkout = [
   upload.single('thumbnail'),
-  schemaValidator("/addworkout"),
+  // schemaValidator("/addworkout"),
   async (req: Request, res: Response) => {
     
     const {
@@ -27,7 +28,7 @@ const addWorkout = [
         subCategory,
         explanation,
         difficultyLevel,
-        thumbnail:req.file?.path,
+        thumbnail:req.file?.path || DEFAULT_IMAGE_PATH,
         videoUrl,
         equipment
       });
